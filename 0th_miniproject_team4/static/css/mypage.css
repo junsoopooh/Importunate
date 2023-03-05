@@ -1,0 +1,66 @@
+.mypage-group-list{
+    width: 600px;
+    height: 470px;
+
+}
+
+.mypage-group-list__h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 64px;
+}
+
+.mypage-screen__listbox{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px auto;
+
+}
+
+.mypage-article{
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+.mypage-group-select{
+    display: flex;
+    width: 600px;
+    height: 80px;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+
+}
+
+.mypage-group-select__column{
+    width: 33%;
+}
+
+.mypage-group-select__h1{
+    font-size: 30px;
+}
+
+.mypage-group-select__selection{
+    font-size: 20px;
+    height: 90px;
+}
+
+.mypage-group-select__hobby-mod-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.number-tag{
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.pagenation{
+    margin-bottom: 30px;
+}

@@ -1,0 +1,65 @@
+.register-screen__header{
+    display: flex;
+    width: 600px;
+    justify-content: center;
+}
+
+
+
+
+.register-screen__title {
+    margin-top: 10px;
+    font-size: 64px;
+}
+
+.register-screen__commnet-input{
+    width: 400px;
+    height: 200px;
+    font-size: 20px;
+    vertical-align:top;
+    padding:10px;
+    border: 0.5px solid rgba(112,88, 88,0.1);
+    border-radius: 20px;
+    
+}
+
+.listpage-screen{
+    position: relative;
+}
+
+.listpage-screen__together-btn{
+    position: fixed;
+    top: 150px;
+}
+
+.register-tag{
+    font-size: 20px;
+    margin: 0 5px;
+}
+
+.tag3,
+.tag2,
+.tag1{
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    margin: 15px auto;
+    font-size: 24px;
+    border-bottom: 0.5px solid rgba(112,88, 88,0.2);
+}
+
+.register-btn{
+    margin: 20px;
+    width: 100px;
+}
+
+.register-content-box{
+    width: 220px;
+    height: 40px;
+    justify-content: center;
+    display: flex;
+    margin: 10px auto;
+    align-items: center;
+    border: 0.5px solid rgba(112, 88, 88, 0.2);
+    border-radius: 15px;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will you do with me? | Register</title>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    
+    <!-- JQuery Cookie -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    
+</head>
+
+<body>
+    <div class="status-bar">
+        <div class="status-bar__column status-bar__home-btn">
+            <p><a href="javascript:history.back();"><i class="fa-solid fa-chevron-left"></i></a></p>
+        </div>
+        <div class="status-bar__column status-bar__massege">
+            <span class="status-bar__massege-text">나랑 같이 할래?</span>
+            <p class="status-bar__current-time">
+                {{current_time}}
+            </p>
+        </div>
+        <div class="status-bar__column status-ul">
+            <!-- <div class="status-bar__btn"><button id="btn-login" class="button is-small is-warning is-light is-rounded"
+                            onclick="location.href='/login'">login</button></div> -->
+            <div class="status-bar__btn"><button id="btn-signup"
+                    class="button is-small is-warning is-light is-rounded status-bar__btn"
+                    onclick="location.href='/signup'">sign
+                    up</button></div>
+            <div class="status-bar__btn"><button id="btn-logout"
+                    class="button is-small is-warning is-light  is-rounded status-bar__btn"
+                    onclick="logout()">logout</button></div>
+            <div class="status-bar__btn"><button id="btn-mypage" onclick="location.href='/mypage'"
+                    class="button is-small is-warning is-light is-rounded status-bar__btn">my page</button></div>
+            <div class="status-bar__btn"><button id="btn-list" onclick="location.href='/listpage'"
+                    class="button is-small is-warning is-light is-rounded status-bar__btn">List</button></div>
+        </div>
+    </div>
+
+    <main class="register-screen">
+        <header class="register-screen__header">
+            <h1 class="register-screen__title">어떤거 같이 할래?</h1>
+        </header>
+        <div class="register-screen__space">
+            <div class="register-screen__hobby-select">
+                <p class="register-tag tag1"> 모임 목적 </p>
+                <div class="register-content-box">
+                    <label class="register-tag">코딩<input type="checkbox" name="hobby" id="coding" value="coding"> </label>
+                    <label class="register-tag">운동<input type="checkbox" name="hobby" id="sports" value="sports"></label>
+                    <label class="register-tag">기타<input type="checkbox" name="hobby" id="etc" value="etc"></label>
+                    <button class="button is-small is-warning is-light is-rounded status-bar__btn" onclick='getCheckboxValue()'>확인</button>
+                </div>
+            </div>
+            <div id="result"></div>
+            <div class="register-screen__commnet">
+                <p class="register-tag tag2">코멘트</p>
+                <textarea class="form-control register-screen__commnet-input" id="comment" rows="3" maxlength="50" placeholder="50자 이내"></textarea>
+
+            </div>
+            <!-- <form action="http://localhost:5000/file_upload" method="POST" enctype="multipart/form-data"> -->
+            <!-- 이미지 : -->
+            <!-- <input type="file" id="photo" accept="image/*" class="form-control" onchange="readURL(this);"> -->
+            <!-- </form>
+                        <img id="preview" /> -->
+            
+            <p class="register-tag tag3">기간설정</p><label  class="register-tag"for=" start">시작일</label>
+            
+            <input type="date" id="start" name="start" value="2023-03-02" min="2023-03-02" max="2099-12-31"><br>
+            <label  class="register-tag"for="end">마감일</label>
+            
+            <input type="date" id="end" name="end" value="2023-03-02" min="2023-03-02" max="2099-12-31">
+            <p  class="register-tag"class="people">
+                최대 인원수 : <input id="maxpeople" type="number" min="2" max="9" value="2" />
+            <p class="register-tag"><button class="button is-warning is-light is-rounded register-btn" onclick="postgroup()"> 등록</button></p>
+        </div>
+    </main> 
+
+</body>
+
+
+
+    <!-- <div id="no-mobile">
+        <span>모바일용 사이트입니다. 화면창 사이즈를 줄여주세요!</span>
+    </div> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/0d62ad31c9.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

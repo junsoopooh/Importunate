@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will you do with me? | login</title>
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    
+    <!-- JQuery Cookie -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</head>
+<body>
+    <div class="status-bar">
+        <div class="status-bar__column status-bar__home-btn">
+            <p><a href="javascript:history.back();"><i class="fa-solid fa-chevron-left"></i></a></p>
+        </div>
+        <div class="status-bar__column status-bar__massege">
+            <span class="status-bar__massege-text">나랑 같이 할래?</span>
+            <p class="status-bar__current-time">
+                {{current_time}}
+            </p>
+        </div>
+        <div class="status-bar__column status-ul">
+            <!-- <div class="status-bar__btn"><button id="btn-login" class="button is-small is-warning is-light is-rounded"
+                    onclick="location.href='/login'">login</button></div> -->
+            <div class="status-bar__btn"><button id="btn-signup"
+                    class="button is-small is-warning is-light is-rounded status-bar__btn" onclick="location.href='/signup'">sign
+                    up</button></div>
+            <div class="status-bar__btn"><button id="btn-logout"
+                    class="button is-small is-warning is-light  is-rounded status-bar__btn" onclick="logout()">logout</button></div>
+            <div class="status-bar__btn"><button id="btn-mypage" onclick="location.href='/mypage'"
+                    class="button is-small is-warning is-light is-rounded status-bar__btn">my page</button></div>
+            <div class="status-bar__btn"><button id="btn-list" onclick="location.href='/listpage'"
+                    class="button is-small is-warning is-light is-rounded status-bar__btn">List</button></div>
+        </div>
+    </div>
+    <main class="login-screen">
+        <div class="field login-screen__field">
+            <h1 class="login-screen__title">나의 사이트에 온 걸</h1>
+            <h1 class="login-screen__title">환영해, 친구야</h1>
+            <div class="login-screen__input-space">
+                <p class="control has-icons-left has-icons-right">
+                    <input id="input-id" class="input login-screen__input" type="text" placeholder="ID">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                    <span class="icon is-small is-right">
+                        <i class="fas fa-check"></i>
+                    </span>
+                </p>
+            </div>
+        </div>
+
+        <div class="field login-screen__field">
+            <p class="control has-icons-left">
+                <input id="input-pw" class="input login-screen__input" type="password" placeholder="Password">
+                <span class="icon is-small is-left">
+                    <i class="fas fa-lock"></i>
+                </span>
+            </p>
+        </div>
+
+        <button onclick="signin()" class="button is-info login-screen__btn">sign in</button>
+
+    </main>
+
+    <!-- <div id="no-mobile">
+        <span>모바일용 사이트입니다. 화면창 사이즈를 줄여주세요!</span>
+    </div> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/0d62ad31c9.js" crossorigin="anonymous"></script>
+</body>
+</html>

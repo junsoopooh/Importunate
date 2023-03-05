@@ -1,0 +1,79 @@
+.signup-screen__title{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 64px;
+
+}
+
+.signup-screen__input-space{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 450px;
+    height: 500px;
+/* justify-content: space-between; */
+/* align-items: center; */
+    margin: 5px;
+    padding:5px;
+}
+
+.signup-input{
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    border: 0.5px solid rgba(0,0,0, 0.3);
+}
+.signup-screen__column{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 90px;
+    width: 450px;
+}
+.signup-screen__tag-hobby{
+    width: 140px;
+}
+
+.signup-pick{
+    width: 330px;
+}
+.signup-screen__column-row{
+    justify-content: center;
+    align-items: center;
+
+}
+
+.signup-tag{
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    width: 100px;
+}
+
+.select-tag{
+    justify-content: center;
+    width: 50px;
+    
+}
+
+.select-column{
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+}
+
+.signup-select{
+    display: flex;
+    height: 20px;
+    width: 20px;
+}
+
+.signup-btn{
+    display: flex;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 auto;
+}

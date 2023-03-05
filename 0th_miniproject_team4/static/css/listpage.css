@@ -1,0 +1,17 @@
+.listpage-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 64px;
+}
+
+table {
+    margin: 50px;
+    table-layout:fixed;
+    word-break: break-all;
+    height: auto;
+}
+
+th,td{
+    align-items: center;
+}

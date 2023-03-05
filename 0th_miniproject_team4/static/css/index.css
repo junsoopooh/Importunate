@@ -1,0 +1,49 @@
+.index-screen{
+    position: relative;
+}
+.index-screen__h1 {
+    text-align: center;
+    font-size: 80px;
+    color: lightseagreen;
+
+}
+
+.index-screen__p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: lightseagreen;
+        font-size: 24px;
+}
+
+.index-screen__p2 {
+    font-size: 24px;
+    color: lightseagreen;
+}
+
+.index-screen__btn{
+    margin: 20px 8px;
+}
+
+.index-screen__img{
+    width: 350px;
+    object-fit: cover;
+    margin-left:300px;
+    padding-top: 0;
+}
+
+.index-screen__h1,
+.index-screen__p,
+.index-screen__p2{
+    position: relative;
+    display: block;
+    z-index: 100;
+    
+}
+
+.index-screen__header{
+    background-color: rgba(240, 234, 186, 0.8);
+    margin: 0 80px;
+    border-radius: 100px;
+    border-bottom-right-radius: 0;
+}

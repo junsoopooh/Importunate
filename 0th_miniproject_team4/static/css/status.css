@@ -1,0 +1,57 @@
+.status-bar {
+    width: inherit;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px;
+    top: 0;
+    background-color:#F8EEE1;
+    border-bottom: 1px solid rgba(112,88,88,0.2);
+    position: fixed;
+}
+
+.status-bar__column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.status-bar__btn {
+    justify-content: flex-end;
+    margin: 1px;;
+}
+
+.status-bar__massege-text {
+    display: flex;
+    margin-top: 12px;
+}
+
+.status-bar__current-time{
+    display: flex;
+    padding: 0px 0px 10px 25px;
+    font-size: 16px;
+    margin-left: 50px;
+    margin-bottom:5px;
+    width: 300px;
+}
+
+.status-bar__massege {
+    position: absolute;
+    left:60px;
+    margin: 5px 5px;
+    padding: 10px 4px 8px 20px;
+    display: flex;
+    width: 200px;
+    height: 60px;
+    flex-direction: column;
+    font-size: 26px;
+    background-color: #FAE100;
+    border-radius: 20px;
+    border-bottom-left-radius: 0px ;
+
+}
+
+.status-bar__home-btn{
+    display: flex;
+    width: 30px;
+}

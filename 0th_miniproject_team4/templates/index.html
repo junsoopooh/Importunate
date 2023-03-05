@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will you do with me? | home</title>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    
+    <!-- JQuery Cookie -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+    
+<body>
+    <main class="index-screen">
+        <header class="index-screen__header">
+            <h1 class=index-screen__h1>나랑..같이 할래?</h1>
+            <p class="index-screen__p">Will you do with me?</p>
+            <p class="index-screen__p2">Just click below</p>
+        
+            <button id="btn-login" class="button is-warning is-light  is-rounded index-screen__btn" onclick="location.href='/login'">log in</button>
+            <button id="btn-signup" class="button is-warning is-light  is-rounded index-screen__btn" onclick="location.href='/signup'">sign up</button>
+            <button id="btn-logout" class="button is-warning is-light  is-rounded index-screen__btn" onclick="logout()">logout</button>
+            <button id="btn-mypage" class="button is-warning is-light  is-rounded index-screen__btn" onclick="location.href='/mypage'">my page</button>
+            <!-- <button id="btn-list" class="button is-info is-focused index-screen__btn" onclick="location.href='/listpage'">list page</button> -->
+        </header>
+        
+    <img class="index-screen__img" src="{{ url_for('static', filename='img/bear.png') }}" />
+    </main>
+
+    <!-- <div id="no-mobile">
+        <span>모바일용 사이트입니다. 화면창 사이즈를 줄여주세요!</span>
+    </div> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/0d62ad31c9.js" crossorigin="anonymous"></script>
+</body>
+</html>
