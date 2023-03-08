@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+    <style>
+        .wrap {
+            width: 1500px;
+            height: 650px;
+            background-color: #e2e2e2;
+            margin-left: 210px;
+        }
+
+        h1 {
+            padding-top: 150px;
+            padding-left: 100px;
+            width: 1000px;
+            font-size: xx-large;
+
+        }
+
+        .btn btn-secondary btn-lg {
+            font-weight: bold;
+        }
+
+        .box-group {
+            padding-left: 100px;
+            width: 600px;
+            line-height: 20px;
+        }
+
+        .row {
+            margin-left: 195px;
+            width: 1000px
+        }
+    </style>
+    <script>
+        function postMemo() {
+            $.ajax({
+                type: "POST",
+                url: "/memo",
+                data: {},
+                success: function (response) {
+                    if (response['result'] == 'success') {
+                        alert(response['msg']);
+                    }
+                }
+            })
+        }
+
+        <button type="submit" class="btn btn-primary" onclick="postArticle()">저장하기</button>
+
+    </script>
+    <title>SW사관학교 정글 | 간단메모</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <h1 class="f-sentence">나홀로메모장 <button type="button" class="btn btn-secondary btn-lg">ver2.0</button>
+        </h1>
+        <p>
+        <div class="box-group">
+            <div class="text-group">
+                <input id="input-title" type="text" class="form-control" aria-describedby="emailHelp"
+                    placeholder="메모 내용을 입력하세요.">
+            </div>
+            <br>
+            <div class="detail-group">
+                <textarea id="input-text" class="form-control" placeholder="내용을 입력하세요." id="floatingTextarea2"
+                    style="height: 100px"></textarea>
+            </div>
+            <br>
+            <button element="button" href="#" type="submit" class="btn btn-primary btn-sm"
+                onclick="alert('저장 완료!')">저장하기</button>
+        </div>
+        </p>
+    </div>
+
+    <div id="card-list" class="row">
+        <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">첫번째 제목을 입력합니다.</h5>
+                    <p class="card-text">첫번째 내용을 입력합니다.</p>
+                    <button id="bye" href="#" type="button" class="btn btn-info btn-sm">수정</button> <button href="#"
+                        type="button" class="btn btn-danger btn-sm" onclick="alert('삭제완료!')">삭제</button>
+                </div>
+            </div>
+        </div>
+        <div id="onecard" class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">두번째 제목을 입력합니다.</h5>
+                    <p class="card-text">두번째 메모내용을 입력합니다.</p>
+                    <button type="button" class="btn btn-info btn-sm">수정</button>
+                    <button href="#" type="button" class="btn btn-danger btn-sm" onclick="alert('삭제완료!')">삭제</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
